@@ -14,12 +14,12 @@ local function pre_process(msg)
 	end
 	if tonumber(timetoexpire) == 0 then
 		if redis:hget('expires0',msg.chat_id_) then end
-		tdcli.sendMessage(msg.chat_id_, 0, 1, '*⚠️تمدید ربات تمام شد از ایدی روبه رو برای شارژ کردن استفاده نمایید@abd2076 @Antispamseed_bot*.', 1, 'md')
+		tdcli.sendMessage(msg.chat_id_, 0, 1, '*⚠️مدت استفاده ربات شما تمام شده است لطفا آن را تمدید کنید.* \nلینک گروه پشتیبانی \n https://telegram.me/joinchat/AAAAAECXaxKDLMCse3IolA', 1, 'md')
 		redis:hset('expires0',msg.chat_id_,'5')
 	end
 	if tonumber(timetoexpire) == 1 then
 		if redis:hget('expires1',msg.chat_id_) then end
-		tdcli.sendMessage(msg.chat_id_, 0, 1, '*⚠️ ⚠️ فقط 1⃣ روز  تا پایان مدت استفاده از ربات باقی مانده است لطفا آن را تمدید کنید. جهت تمدید به @abd2076 @Antispamseed_bot مراجعه شود*.', 1, 'md')
+		tdcli.sendMessage(msg.chat_id_, 0, 1, '*⚠️ ⚠️ فقط 1⃣ روز  تا پایان مدت استفاده از ربات باقی مانده است لطفا آن را تمدید کنید*\n لینک پشتیبانی \n https://telegram.me/joinchat/AAAAAECXaxKDLMCse3IolA', 1, 'md')
 		redis:hset('expires1',msg.chat_id_,'5')
 	end
 
@@ -52,6 +52,6 @@ return {
   run = run,
   pre_process = pre_process
 }
--- @dr_bot5
--- @you4u2
--- http://helpgram.bolgfa.com
+-- http://permag.ir
+-- @permag_ir
+-- @ermag_bots
